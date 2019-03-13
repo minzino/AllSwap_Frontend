@@ -1,0 +1,15 @@
+img {
+    width: 80%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html, body {
+    width: 100%;
+    overflow-x:  hidden;
+}
+
+footer {
+    text-align: center;
+}

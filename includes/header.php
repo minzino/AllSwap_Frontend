@@ -1,4 +1,7 @@
 <header>
+  <!--  The image used in header was created by Sung Woo Min.  -->
+  <img alt="Header" src="images/logo.PNG"/>
+
   <h1 id="title"><?php echo $title; ?></h1>
   <nav id="menu">
     <ul>
