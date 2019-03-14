@@ -2,8 +2,7 @@
   <!--  The image used in header was created by Sung Woo Min.  -->
   <img alt="Header" src="images/logo.PNG"/>
 
-  <h1 id="title"><?php echo $title; ?></h1>
-  <nav id="menu">
+  <nav id="nav">
     <ul>
       <?php
       foreach($pages as $page_id => $page_name) {
