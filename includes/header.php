@@ -1,7 +1,4 @@
 <header>
-  <!--  The image used in header was created by Sung Woo Min.  -->
-  <img alt="Header" src="images/logo.PNG"/>
-
   <nav id="nav">
     <ul>
       <?php
@@ -17,4 +14,7 @@
       ?>
     </ul>
   </nav>
+
+  <!--  The image used in header was created by Sung Woo Min.  -->
+  <img alt="Header" src="images/logo.PNG"/>
 </header>

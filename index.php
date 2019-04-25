@@ -1,6 +1,10 @@
 <?php
 include("includes/init.php");
 $current_page_id="index";
+
+if (isset($_POST["logout"])) {
+  log_out();
+};
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,16 +15,33 @@ $current_page_id="index";
 
 </head>
 <body>
+  
+<?php
+  if(!$current_user) {
+    include("includes/login.php");
+  } else {
+    include("includes/logout.php");
+  }
+  print_messages();
+  ?>
+
   <?php include("includes/header.php");?>
-  <div class="content">
-    <div class="textbox">
-      <h2>History</h2>
-        <h3>Description</h3>
-          <p>Problem Statement:<br>
-              Lack of resell platform for textbooks in the Cornell Community<br>
-            Objective:<br>
-              Providing a web-based platform for efficient exchangement of textbooks within Cornell community<br>
-              We are focusing on the feasibility and convenience in exchangement of goods, including direct deal, within the community.<br></p>
+
+  <div id="content-wrap2">
+    <form id="search" action="index.php" method="get">
+      <select name="category">
+        <option value="" selected disabled>Search by</option>
+        <option value="textbook_title">Textbook Title</option>
+        <option value="textbook_author">Textbook Author</option>
+        <option value="textbook_genre">Genre</option>
+        <option value="isbn">ISBN</option>
+        <option value="price">Price</option>
+      </select>
+
+      <input id="search_term" type="text" name="search" placeholder="Search"/>
+      <button id="search_icon" type="submit">Search</button>
+    </form>
+  </div>
 
   <?php include("includes/footer.php");?>
 </body>
